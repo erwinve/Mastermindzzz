@@ -1,0 +1,63 @@
+#background {
+    background-color: #1C1D21;
+}
+.logbtns{
+    width: 100%;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin: auto;
+    display: block;
+}
+
+nav div button{
+    margin: 5px;
+}
+
+.blackground{
+    background-color: #1C1D21;
+    height: 100%;
+    width: 100%;
+}
+
+/* the game */
+.gamefield{
+    width: 60% !important;
+    height: 100%;
+    background-color: #DDDDDD;
+    margin: auto;
+    padding-bottom: 200px;
+
+}
+
+.rows{
+    width: 50%;
+    height: 75%;
+    margin: auto;
+    display: inline-block;
+}
+
+.circle{
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 29px;
+}
+
+.border{
+    border-color: #1C1D21 !important;
+}
+
+.circledropdown{
+    width: 5%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.horizantal{
+    display: inline;
+}
