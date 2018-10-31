@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['username'] = $row['uname'];
                     $_SESSION['email'] = $row['email'];
             
-                    header("Location: ../dashboard.php");
+                    header("Location: ../pregame.php");
                     exit();
 
                     

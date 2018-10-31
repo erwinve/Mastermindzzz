@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="pregame.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <?php
       if(isset($_SESSION['loggedin'])){
@@ -17,12 +17,12 @@
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-          echo $_SESSION["username"];
-          echo'
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' .
+          $_SESSION["username"] .
+          '
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="pregame.php">Home</a>
           <a class="dropdown-item" href="#">Profiel</a>
           <a class="dropdown-item" href="PHP/logout.php">Uitloggen</a>
         </div>
