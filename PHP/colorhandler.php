@@ -6,7 +6,7 @@ session_start();
  
         //give the session arrays a name
         $botcombination = $_SESSION['botarray'];
-        $arr = $_SESSION['array'];
+        $arr = $_SESSION['gamefield'];
 
         if ($_SESSION['gamelength']  > 0){
 
@@ -31,7 +31,7 @@ session_start();
             }
 
             //set array back to a session array
-            $_SESSION['array'] = $arr;
+            $_SESSION['gamefield'] = $arr;
 
         }
         else{

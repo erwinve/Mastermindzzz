@@ -23,7 +23,7 @@ nav div button{
 .board{
     width: 500px;
     background-color: beige;
-    height: 1150px;
+    height: 100%;
     border-radius: 25px;
     display: block;
     margin: 10px auto !important;
@@ -46,8 +46,8 @@ nav div button{
     background-color: black;
     border-radius: 50%;
     display: inline-block;
-    margin: 2px auto;
-
+    margin: 2px;
+   
 }
 
 .boardpinred{
@@ -94,6 +94,15 @@ nav div button{
         display: inline-block;
         margin: 2px auto;
     
+}
+
+.emptypins{
+    width: 25px;
+    height: 25px;
+    background-color: purple;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px auto;
 }
 
 .form-group{

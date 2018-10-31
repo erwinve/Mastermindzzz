@@ -5,7 +5,10 @@
    include("Includes/navbar.php");
    ?>
   <div class="board">
+  <table>
     <?php include('PHP/mmscript.php');?>
+    </table>
+    
     <form method="POST" action="PHP/colorhandler.php">
     <div class="form-group">
 
