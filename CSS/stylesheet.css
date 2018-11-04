@@ -3,22 +3,21 @@
 }
 .logbtns{
     width: 100%;
-    left:0; right:0;
-    top:0; bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
     margin: auto;
     display: block;
 }
-
 nav div button{
     margin: 5px;
 }
-
 .blackground{
     background-color: #1C1D21;
     height: 100%;
     width: 100%;
 }
-
 /* the game */
 .board{
     width: 500px;
@@ -28,18 +27,13 @@ nav div button{
     display: block;
     margin: 10px auto !important;
     padding: 15px;
-    
-
 }
-
 .boardpiny{
     width: 100px;
     height: 100px;
     background-color: black;
     border-radius: 50%;
-
 }
-
 .boardpinx{
     width: 100px;
     height: 100px;
@@ -47,9 +41,7 @@ nav div button{
     border-radius: 50%;
     display: inline-block;
     margin: 2px;
-   
 }
-
 .boardpinred{
     width: 100px;
     height: 100px;
@@ -58,7 +50,6 @@ nav div button{
     display: inline-block;
     margin: 2px auto;
 }
-
 .boardpinblue{
     width: 100px;
     height: 100px;
@@ -67,7 +58,6 @@ nav div button{
     display: inline-block;
     margin: 2px auto;
 }
-
 .boardpingreen{
     width: 100px;
     height: 100px;
@@ -76,7 +66,6 @@ nav div button{
     display: inline-block;
     margin: 2px auto;
 }
-
 .boardpinyellow{
     width: 100px;
     height: 100px;
@@ -85,18 +74,22 @@ nav div button{
     display: inline-block;
     margin: 2px auto;
 }
-
 .boardpinpurple{
-        width: 100px;
-        height: 100px;
-        background-color: purple;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 2px auto;
-    
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px auto;
 }
-
-.emptypins{
+.pinplace{
+    width: 51px;
+    height: 100%;
+    float: right;
+    position: relative;
+    top: -1000px;
+}
+.emptypin{
     width: 25px;
     height: 25px;
     background-color: purple;
@@ -104,7 +97,33 @@ nav div button{
     display: inline-block;
     margin: 2px auto;
 }
-
+.pinwhite{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px auto;
+}
+.pinblack{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px auto;
+}
 .form-group{
     margin: 40px;
+}
+
+.gameinfopopup{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0px; bottom: 0px;
+    right: 0px; left: 0px;
+    background: yellow;
+    color: black;
 }

@@ -20,15 +20,36 @@ session_start();
             
             }
             else{
+                $pins = $_SESSION['pins'];
                 //give the variable the length of the board
-                $i = $_SESSION['gamelength'];
+                $rowvalue = $_SESSION['gamelength'];
+                $rowvalue2 = 0;
+
                 //place the guess colors on the given position in the boardarray
-                $arr[$i] = $guess;
+                $arr[$rowvalue] = $guess;
                 //decrement the variable value
-                $i--;
+                $rowvalue--;
+                
+
+                
+                for($i = 0; $i < 4; $i++){
+                    if($arr[$rowvalue2][$i] == $guess[$i]){
+                        array_push($pins[$i], 'pinblack');
+                    }
+                    elseif(in_array($arr[$rowvalue2][$i], $guess)){
+                        $pins[$i] = 'pinwhite';
+                    }               
+                }
+
+                print_r($pins[$i]);
+                $rowvalue2++;
+
                 //set the variable back to a session variable
                 $_SESSION['gamelength'] = $i;
+                $_SESSION['pins'] = $pins;
             }
+
+
 
             //set array back to a session array
             $_SESSION['gamefield'] = $arr;
@@ -41,5 +62,5 @@ session_start();
     }
 
  
-    header('Location: ../ingame.php');
+    //header('Location: ../ingame.php');
 ?>
