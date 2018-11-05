@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $row['uname'];
                     $_SESSION['email'] = $row['email'];
+                    $_SESSION['id'] = $row['ID'];
             
                     header("Location: ../pregame.php");
                     exit();

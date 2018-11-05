@@ -1,42 +1,56 @@
 <?php
     $pagetitle = 'Congratulations!';
+    include('PHP/dbconnect.php');
     include("PHP/titleinf.php");
     include("Includes/head.php");
     include("Includes/navbar.php");
     include("Includes/destroygame.php");
     ?>
-    <p>Congratulations u won!</p>
 
     <?php
-    $gamepoints = $_SESSION['gamepoints'];
-        switch ($gamepoints){
-            case 10:
-                $gamepoints = 1;
-                break;
+    echo $_SESSION['winneracces'];
+    if (isset($_SESSION['loggedin']) && $_SESSION['winneracces'] > 0){
+        $id = $_SESSION['id'];
+        $username = mysqli_real_escape_string($link, $_SESSION['username']);
+        $gamepoints = $_SESSION['gamepoints'];
 
-            case 8:
-                $gamepoints = 3;
-                break;
+        echo "Congratulations " . $_SESSION['username'] . " u won " . $gamepoints . "points!";
 
-            case 5:
-                $gamepoints = 5;
-                break;
+            switch ($gamepoints){
+                case 10:
+                    $gamepoints = 1;
+                    break;
 
-            case 3:
-                $gamepoints = 8;
-                break;
+                case 8:
+                    $gamepoints = 3;
+                    break;
 
-            case 1:
-                $gamepoints = 10;
-                break;
-                
+                case 5:
+                    $gamepoints = 5;
+                    break;
+
+                case 3:
+                    $gamepoints = 8;
+                    break;
+
+                case 1:
+                    $gamepoints = 10;
+                    break;
+                    
+            }
+
+
+
+
+
+            $sql="UPDATE user SET score = score + $gamepoints, games_played = games_played + 1 WHERE ID = $id";
+
+            mysqli_query($link, $sql);
         }
- 
-        $username = mysql_real_escape_string($_SESSION['username']);
-
-
-
-        $sql="UPDATE user SET highscore = highscore + $gamepoints WHERE uname = $_SESSION['username']";
+        else{
+         header('location: index.php');
+         exit();
+        }
 
     ?>
 
@@ -44,5 +58,4 @@
 
 <?php
    include('Includes/footer.php');
-   
 ?>

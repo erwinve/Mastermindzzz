@@ -13,13 +13,15 @@ session_start();
     
             // if the guesed array is the same as the bot combination
             if ($guess == $_SESSION['botarray']) {
-
-                //unset the session array and header to the pregame file
+                //give acces to the winner file
+                $_SESSION['winneracces'] = 1;
+                //header to the winner file
                 header('Location: ../winner.php');
                 exit();
             
             }
             else{
+                $botcombination = $_SESSION['botarray'];
                 $pins = $_SESSION['pins'];
                 //give the variable the length of the board
                 $rowvalue = $_SESSION['gamelength'];
@@ -31,17 +33,18 @@ session_start();
                 $rowvalue--;
                 
 
-                
+                //if the circle with the given positions in the array is the same as the cirlce in the botcombination push a black pin in the array
+                //elseif its in the array but not on the right position push a white pin in the array
                 for($i = 0; $i < 4; $i++){
-                    if($arr[$rowvalue2][$i] == $guess[$i]){
-                        array_push($pins[$i], 'pinblack');
+                    if($guess[$i] == $botcombination[$i]){
+                        $pins[$rowvalue2][$i] = 'pinblack';
                     }
-                    elseif(in_array($arr[$rowvalue2][$i], $guess)){
-                        $pins[$i] = 'pinwhite';
-                    }               
+                    elseif(in_array($guess[$i], $botcombination)){
+                        $pins[$rowvalue2][$i] = 'pinwhite';
+                    }            
                 }
-
-                print_r($pins[$i]);
+                
+                //increment value
                 $rowvalue2++;
 
                 //set the variable back to a session variable
@@ -62,5 +65,5 @@ session_start();
     }
 
  
-    //header('Location: ../ingame.php');
+    header('Location: ../ingame.php');
 ?>

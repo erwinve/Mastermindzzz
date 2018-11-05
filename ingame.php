@@ -5,9 +5,13 @@
    include("Includes/navbar.php");
    ?>
   <div class="board">
-  <table>
-    <?php include('PHP/mmscript.php');?>
-    </table>
+  
+    <?php
+       if (isset($_SESSION['loggedin']) && isset($_POST['difficultysubmit'])){
+    
+    include('PHP/mmscript.php');
+    ?>
+    
     
     <form method="POST" action="PHP/colorhandler.php">
     <div class="form-group">
@@ -56,6 +60,13 @@
 
 
 <?php
+       }
+   else{
+    header('location: index.php');
+    exit();
+  
+   }
    include('Includes/footer.php');
+  
    
    ?>

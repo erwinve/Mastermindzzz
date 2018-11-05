@@ -1,7 +1,8 @@
 <?php
-   $pagetitle="Mastermind";
+   $pagetitle="Difficulty Select";
    include("PHP/titleinf.php");
    include("Includes/head.php");
+   if (isset($_SESSION['loggedin'])){
    include("Includes/navbar.php");
    $_SESSION['access'] = 1;
    unset($_SESSION['array']);
@@ -51,6 +52,10 @@
 
 
 <?php
+   }
+   else{
+     header('location: index.php');
+     exit();
+   }
    include('Includes/footer.php');
-   
 ?>

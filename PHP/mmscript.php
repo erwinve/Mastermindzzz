@@ -9,10 +9,10 @@ if (!isset($_SESSION['access']))
 	{
 	if ($_SESSION['start'] != true)
 		{
-			echo 	"<div class='gameinfopopup'>
-						<h1>Welcome to Mastermind</h1>
-						<p>In this game you need to guess the code the bot makes!</p>
-					</div>";
+			// echo 	"<div class='gameinfopopup'>
+			// 			<h1>Welcome to Mastermind</h1>
+			// 			<p>In this game you need to guess the code the bot makes!</p>
+			// 		</div>";
 		// the generated bot combination
 
 		$colors = array('boardpinred', 'boardpinblue', 'boardpingreen', 'boardpinred', 'boardpinpurple');
