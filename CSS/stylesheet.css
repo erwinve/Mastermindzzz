@@ -114,7 +114,19 @@ nav div button{
     margin: 2px auto;
 }
 .form-group{
-    margin: 40px;
+    margin: 50px;
+    width: 75%;
+    padding: 2px;
+    
+}
+
+.outer{
+    margin: 0px auto;
+    background-color: beige;
+    width: 20%;
+    border-radius: 25px;
+    padding: 5px;
+
 }
 
 .gameinfopopup{
@@ -126,4 +138,11 @@ nav div button{
     right: 0px; left: 0px;
     background: yellow;
     color: black;
+}
+
+.leaderboards{
+    float: left;
+    width: 400px;
+    height: 300px;
+    background-color: beige;
 }

@@ -39,10 +39,6 @@
                     
             }
 
-
-
-
-
             $sql="UPDATE user SET score = score + $gamepoints, games_played = games_played + 1 WHERE ID = $id";
 
             mysqli_query($link, $sql);

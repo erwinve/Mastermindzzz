@@ -7,16 +7,15 @@
   <div class="board">
   
     <?php
-       if (isset($_SESSION['loggedin']) && isset($_POST['difficultysubmit'])){
-    
     include('PHP/mmscript.php');
+    if (isset($_SESSION['loggedin'])){
     ?>
-    
-    
+    </div>
+    <div class="outer">
     <form method="POST" action="PHP/colorhandler.php">
     <div class="form-group">
 
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Color 1</label>
     <select name="selector1" class="form-control" id="exampleFormControlSelect1">
       <option value='boardpinred'>red</option>
       <option value='boardpinblue'>blue</option>
@@ -25,7 +24,7 @@
       <option value='boardpinpurple'>purple</option>
     </select>
 
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Color 2</label>
     <select name="selector2" class="form-control" id="exampleFormControlSelect1">
       <option value='boardpinred'>red</option>
       <option value='boardpinblue'>blue</option>
@@ -34,7 +33,7 @@
       <option value='boardpinpurple'>purple</option>
     </select>
 
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Color 3</label>
     <select name="selector3" class="form-control" id="exampleFormControlSelect1">
       <option value='boardpinred'>red</option>
       <option value='boardpinblue'>blue</option>
@@ -43,7 +42,7 @@
       <option value='boardpinpurple'>purple</option>
     </select>
 
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Color 4</label>
     <select name="selector4" class="form-control" id="exampleFormControlSelect1">
       <option value='boardpinred'>red</option>
       <option value='boardpinblue'>blue</option>
@@ -51,11 +50,18 @@
       <option value='boardpingreen'>green</option>
       <option value='boardpinpurple'>purple</option>
     </select>
-
-    </div>
     <button type="submit" name="submit" class="btn btn-primary mb-2">send</button>
+    </div>
+
     </form>
+    </div>
   </div>
+
+    <div class="leaderboard">
+  <?php
+    include('leaderboards.php');
+    ?>
+    </div>
   
 
 
