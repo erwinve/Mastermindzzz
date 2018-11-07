@@ -1,9 +1,12 @@
 <?php
-    $pagetitle = 'Login';
-    include("PHP/titleinf.php");
-    include("Includes/head.php");
-    include("Includes/navbar.php");
-    ?>
+$pagetitle = 'Login';
+include ("PHP/titleinf.php");
+
+include ("Includes/head.php");
+
+include ("Includes/navbar.php");
+if (!isset($_SESSION['loggedin'])){
+?>
   <div class="container py-5">
     <div class="row">
         <div class="col-md-12">
@@ -54,6 +57,10 @@
     
 
 <?php
-    include('Includes/footer.php');
+}
+else{
+    header ('Location: pregame.php');
+}
+include ('Includes/footer.php');
 
 ?>

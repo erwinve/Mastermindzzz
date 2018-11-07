@@ -1,9 +1,12 @@
 <?php
-$pagetitle="Register";
-include("PHP/titleinf.php");
-    include("Includes/head.php");
-    include("Includes/navbar.php");
-    ?>
+$pagetitle = "Register";
+include ("PHP/titleinf.php");
+
+include ("Includes/head.php");
+
+include ("Includes/navbar.php");
+
+?>
   <div class="container py-5">
     <div class="row">
         <div class="col-md-12">
@@ -30,7 +33,7 @@ include("PHP/titleinf.php");
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="text" class="form-control form-control-lg rounded-0" name="email" id="uname1" required="">
+                                    <input type="text" class="form-control form-control-lg rounded-0" name="email" id="email1" required="">
                                     <div class="invalid-feedback">Voer je email adres in.</div>
                                 </div>
                                 <div class="logbtns">
@@ -58,5 +61,6 @@ include("PHP/titleinf.php");
 
     
 <?php
-include('Includes/footer.php');
+include ('Includes/footer.php');
+
 ?>

@@ -9,24 +9,29 @@ if (!isset($_SESSION['access']))
 	{
 	if ($_SESSION['start'] != true)
 		{
-			// echo 	"<div class='gameinfopopup'>
-			// 			<h1>Welcome to Mastermind</h1>
-			// 			<p>In this game you need to guess the code the bot makes!</p>
-			// 		</div>";
-		// the generated bot combination
 
-		$colors = array('boardpinred', 'boardpinblue', 'boardpingreen', 'boardpinred', 'boardpinpurple');
+		// the colors
+
+		$colors = array(
+			'boardpinred',
+			'boardpinblue',
+			'boardpingreen',
+			'boardpinred',
+			'boardpinpurple',
+			'boardpinviolet',
+			'boardpinpink',
+			'boardpinwhite',
+			'boardpinorange',
+			'boardpinlg'
+		);
 		$botcombination = array();
 		for ($i = 0; $i < 4; $i++)
 			{
-			$botcombination[$i] = $colors[mt_rand(0, 4) ];
+			$botcombination[$i] = $colors[mt_rand(0, 9) ];
 			}
 
 		print_r($botcombination);
-
-		// making the empty array accesable for other files
-
-		$_SESSION['botarray'] = $botcombination;
+		echo "</br>";
 
 		// empty array for the gamefield and for the pins
 
@@ -34,7 +39,7 @@ if (!isset($_SESSION['access']))
 		$pins = array();
 
 		// making the empty arrays accesable for other files
-
+		$_SESSION['botarray'] = $botcombination;
 		$_SESSION['gamefield'] = $gamefield;
 		$_SESSION['pins'] = $pins;
 
@@ -50,14 +55,24 @@ if (!isset($_SESSION['access']))
 
 			for ($i = 0; $i < $_SESSION['gamelength']; $i++)
 				{
-				array_push($_SESSION['gamefield'], array('boardpinx', 'boardpinx', 'boardpinx', 'boardpinx'));
+				array_push($_SESSION['gamefield'], array(
+					'boardpinx',
+					'boardpinx',
+					'boardpinx',
+					'boardpinx'
+				));
 				}
 
 			// pushing empty answer pins in the array
 
 			for ($i = 0; $i < $_SESSION['gamelength']; $i++)
 				{
-				array_push($_SESSION['pins'], array('emptypin', 'emptypin', 'emptypin', 'emptypin'));
+				array_push($_SESSION['pins'], array(
+					'emptypin',
+					'emptypin',
+					'emptypin',
+					'emptypin'
+				));
 				}
 
 			// make the gamelength useable for arrays
@@ -81,6 +96,7 @@ if (!isset($_SESSION['access']))
 		}
 
 	// echo the two dimensional array(answer pins)
+
 	echo "<div class='pinplace'>";
 	foreach($_SESSION['pins'] as $v1)
 		{
@@ -89,7 +105,8 @@ if (!isset($_SESSION['access']))
 			echo "<div class='" . $v2 . "'></div>";
 			}
 		}
-		echo "</div>";
 	}
 
+echo "</div>";
 ?>
+

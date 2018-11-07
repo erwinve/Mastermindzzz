@@ -1,13 +1,12 @@
 <?php
 $servername = "localhost";
-$dbname = "mastermind";
-$username = "root";
-$password = "";
-
-
-
+$username = "erwinvenneker";
+$password = "Rotatio123";
+$dbname = "erwinvenneker_mastermind";
 $link = mysqli_connect($servername, $username, $password, $dbname);
-if (!$link) {
-    die("Could not connect: " . mysql_error());
-}
+
+if (!$link)
+	{
+	die("Could not connect: " . mysql_error());
+	}
 ?>
